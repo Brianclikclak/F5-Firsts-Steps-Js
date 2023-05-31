@@ -283,9 +283,9 @@ document.getElementById("mostrarBtn").addEventListener("click", function(){
 });
   
 // Crear un array de 10 nombres
-//
-//
-//
+
+
+
 let nombresDos = ["Juan", "María", "Carlos", "Laura", "Pedro", "Ana", "Luis", "Sara", "Javier", "Lucía"];
 
 function imprimirNombres() {
@@ -311,7 +311,7 @@ imprimirCantidadNumeros();
 let datos = [
   { id: 1, name: "Perro", status: "Activo", species: "Mastin", type: "Tipo 1 ", gender: "Masculino" },
   { id: 2, name: "Gato", status: "Inactivo", species: "Siames", type: "Tipo 2", gender: "Femenino" },
-  // ... y así sucesivamente para los otros objetos
+  
 ];
 
 let tabla = document.createElement("table");
