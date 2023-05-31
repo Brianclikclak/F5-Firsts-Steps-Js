@@ -241,8 +241,108 @@ let nombres = ["juan", "maría", "pedro", "lucía"];
 convertirPrimeraLetraMayuscula(nombres);
 console.log("Nombres con primera letra mayúscula:", nombres);
 
+// MANIPULACION DEL DOM
 
+// Crear un botón en HTML y usar JavaScript para mostrar un mensaje cuando se hace clic.
+
+
+document.getElementById("btn").onclick = function(){
+  alert("Tampoco es que te fuera a enseñar algo");
+}
+
+
+// Cambiar el contenido de un elemento HTML mediante JavaScript.
+
+let texto = 0; 
+
+document.getElementById("btnDos").addEventListener("click", function() {
+  let parrafo = document.getElementById("texto");
+  
+  if (texto === 0) {
+    parrafo.textContent = "En cuando hagas click arriba, cambiare";
+    texto = 1;
+  } else if (texto === 1) {
+    parrafo.textContent = "Ves? He cambiado";
+    texto = 2;
+  } else {
+    parrafo.textContent = "Empezemos de nuevo";
+    texto = 0;
+  }
+});
  
+// Ocultar y mostrar elementos HTML utilizando JavaScript.
+
+document.getElementById("ocultarBtn").addEventListener("click", function (){
+  let texto = document.getElementById("parrafoDos");
+  texto.style.display = "none";
+});
+
+document.getElementById("mostrarBtn").addEventListener("click", function(){
+  let texto = document.getElementById("parrafoDos");
+  texto.style.display = "block";
+});
+  
+// Crear un array de 10 nombres
+//
+//
+//
+let nombresDos = ["Juan", "María", "Carlos", "Laura", "Pedro", "Ana", "Luis", "Sara", "Javier", "Lucía"];
+
+function imprimirNombres() {
+  let lista = document.createElement("ul");
+  for (var i = 0; i < nombresDos.length; i++) {
+    let item = document.createElement("li");
+    item.textContent = nombresDos[i];
+    lista.appendChild(item);
+  }
+  document.body.appendChild(lista);
+}
+imprimirNombres()
+let numerosDos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function imprimirCantidadNumeros() {
+  let cantidad = numerosDos.length;
+  let mensaje = "El array de números contiene " + cantidad + " elementos.";
+  let parrafo = document.createElement("p");
+  parrafo.textContent = mensaje;
+  document.body.appendChild(parrafo);
+}
+imprimirCantidadNumeros();
+
+let datos = [
+  { id: 1, name: "Perro", status: "Activo", species: "Mastin", type: "Tipo 1 ", gender: "Masculino" },
+  { id: 2, name: "Gato", status: "Inactivo", species: "Siames", type: "Tipo 2", gender: "Femenino" },
+  // ... y así sucesivamente para los otros objetos
+];
+
+let tabla = document.createElement("table");
+let encabezado = document.createElement("tr");
+
+for (let key in datos[0]) {
+  let th = document.createElement("th");
+  th.textContent = key;
+  encabezado.appendChild(th);
+}
+
+tabla.appendChild(encabezado);
+
+for (let i = 0; i < datos.length; i++) {
+  let fila = document.createElement("tr");
+
+  for (let key in datos[i]) {
+    let celda = document.createElement("td");
+    celda.textContent = datos[i][key];
+    fila.appendChild(celda);
+  }
+
+  tabla.appendChild(fila);
+}
+
+document.body.appendChild(tabla);
+
+
+
+
+
 
  
  
